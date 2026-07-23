@@ -62,7 +62,7 @@ export default function Countdown() {
           <h2 className='mt-3 font-script text-5xl text-cream md:text-6xl'>
             {t.countdown.title}
           </h2>
-          <Flourish className='mx-auto mt-6 h-6 w-32 text-taupe' />
+          <Flourish className='mx-auto mt-6 h-6 w-32 text-taupe whip' />
 
           <div className='mx-auto mt-14 grid max-w-2xl grid-cols-4 gap-3 md:gap-6'>
             {units.map((u) => (

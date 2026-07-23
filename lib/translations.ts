@@ -145,7 +145,7 @@ export const translations: Record<Lang, Dictionary> = {
       error: 'Something went wrong. Please try again.',
       thankTitle: 'Thank You!',
       thankText:
-        "Your response has been received. We can't wait to celebrate with you.",
+        "We are incredibly happy that you will be joining us to celebrate one of the most important days of our lives together. Your response has been successfully saved.",
       rejectText:
         'Your response has been successfully saved. Although we will miss having you with us, we are truly grateful that you let us know.',
     },
@@ -176,7 +176,7 @@ export const translations: Record<Lang, Dictionary> = {
       minutes: 'Րոպե',
       seconds: 'Վրկ',
     },
-    gallery: { eyebrow: 'Թանկ Պահեր', title: 'Մեր Պատկերասրահը' },
+    gallery: { eyebrow: 'Սիրելի Պահեր', title: 'Մեր Պատկերասրահը' },
     dailyGuide: {
       eyebrow: 'Օրվա Ծրագիրը',
       title: 'Ինչ է սպասվում',
@@ -231,7 +231,7 @@ export const translations: Record<Lang, Dictionary> = {
       error: 'Ինչ-որ բան սխալ գնաց։ Խնդրում ենք նորից փորձել։',
       thankTitle: 'Շնորհակալություն պատասխանի համար:',
       thankText:
-        'Ձեր պատասխանը ստացվել է։ Անհամբեր սպասում ենք Ձեզ հետ տոնելուն։',
+        'Մենք անչափ ուրախ ենք, որ միանալու եք մեզ՝ միասին տոնելու մեր կյանքի կարևորագույն օրը։ Ձեր պատասխանը հաջողությամբ պահպանվել է։',
       rejectText:
         'Ձեր պատասխանը հաջողությամբ պահպանվել է։ Թեև կտխրենք ձեր բացակայության համար, բայց անչափ շնորհակալ ենք տեղեկացնելու համար։',
     },
