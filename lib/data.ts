@@ -1,3 +1,4 @@
+import GroomHouseIcon from '@/public/icons/groom-house.svg';
 import HouseIcon from '@/public/icons/house.svg';
 import ChurchIcon from '@/public/icons/church.svg';
 import CakeIcon from '@/public/icons/cake.svg';
@@ -60,6 +61,14 @@ export const wedding = {
   ],
 
   events: [
+    {
+      name: 'Groom House',
+      time: '10:30',
+      venue: "Groom's House",
+      address: 'Ara Sargsyan Street, 17A, Yerevan',
+      mapUrl: 'https://yandex.com/maps/-/CTbSUWpa',
+      icon: GroomHouseIcon,
+    },
     {
       name: 'Bride House',
       time: '11:00',

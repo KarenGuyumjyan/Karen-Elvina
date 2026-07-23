@@ -103,6 +103,11 @@ export const translations: Record<Lang, Dictionary> = {
       viewMap: 'View Map',
       items: [
         {
+          name: 'Groom House',
+          venue: "Groom's House",
+          address: 'Ara Sargsyan Street, 17A, Yerevan',
+        },
+        {
           name: 'Bride House',
           venue: "Bride's House",
           address: 'Aytsemnik Urartu Street, 66',
@@ -145,7 +150,7 @@ export const translations: Record<Lang, Dictionary> = {
       error: 'Something went wrong. Please try again.',
       thankTitle: 'Thank You!',
       thankText:
-        "We are incredibly happy that you will be joining us to celebrate one of the most important days of our lives together. Your response has been successfully saved.",
+        'We are incredibly happy that you will be joining us to celebrate one of the most important days of our lives together. Your response has been successfully saved.',
       rejectText:
         'Your response has been successfully saved. Although we will miss having you with us, we are truly grateful that you let us know.',
     },
@@ -188,6 +193,11 @@ export const translations: Record<Lang, Dictionary> = {
       title: 'Տոնակատարությունը',
       viewMap: 'Դիտել Քարտեզը',
       items: [
+        {
+          name: 'Փեսայի Տուն',
+          venue: 'Փեսայի Տուն',
+          address: 'Արա Սարգսյան փողոց, 17Ա, Երևան',
+        },
         {
           name: 'Հարսի Տուն',
           venue: 'Հարսի Տուն',

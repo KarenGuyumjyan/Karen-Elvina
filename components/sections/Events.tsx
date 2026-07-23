@@ -15,7 +15,14 @@ type EventCardProps = {
   delay: number;
 };
 
-function EventCard({ venue, time, address, mapUrl, viewMap, delay }: EventCardProps) {
+function EventCard({
+  venue,
+  time,
+  address,
+  mapUrl,
+  viewMap,
+  delay,
+}: EventCardProps) {
   return (
     <Reveal
       delay={delay}
@@ -64,7 +71,7 @@ export default function Events() {
           <h2 className='section-title mt-3'>{t.events.title}</h2>
         </Reveal>
         <WhipFloral
-          className=' -left-[30px] w-[140px] sm:w-[180px] z-10'
+          className=' -left-[30px] top-20 w-[140px] sm:w-[180px] z-10 md:left-48'
           spriteClassName='absolute -scale-x-100 rotate-[20deg] opacity-70'
           origin='left bottom'
           amps={[0.45, 1.65, 4.2]}
@@ -74,7 +81,7 @@ export default function Events() {
           tipOrigin='50% 33%'
         />
         <WhipFloral
-          className=' -right-[30px] bottom-[460px] w-[140px] sm:w-[180px] z-10'
+          className=' -right-[30px] bottom-[832px] w-[140px] sm:w-[180px] z-10 md:right-32'
           spriteClassName='absolute -rotate-[20deg] opacity-70'
           origin='left bottom'
           amps={[0.45, 1.65, 4.2]}
@@ -87,13 +94,20 @@ export default function Events() {
           src='/images/decorations/leaf_background.webp'
           alt=''
           aria-hidden='true'
-          className='animate-float-versa pointer-events-none absolute rotate-[150deg] -left-2 -bottom-32 z-20 w-28 opacity-90 sm:-left-2 sm:w-28'
+          className='animate-float-versa pointer-events-none absolute rotate-[150deg] -left-2 -bottom-32 z-20 w-28 opacity-90 md:left-48 sm:w-28'
         />
         <img
           src='/images/decorations/leaf_background.webp'
           alt=''
           aria-hidden='true'
           className='absolute right-8 -top-44 z-1 w-60 -rotate-45 opacity-10 sm:-right-10 sm:w-96 sm:-top-80'
+        />
+
+        <img
+          src='/images/decorations/leaf_background.webp'
+          alt=''
+          aria-hidden='true'
+          className='absolute left-4 -bottom-6 z-1 w-80 -rotate-20 opacity-10 sm:-left-20 sm:w-[460px] sm:-bottom-48'
         />
         <div className='mt-16 flex flex-col gap-8 justify-center items-center w-full md:max-w-[500px]'>
           {cards.map((event, i) => (
