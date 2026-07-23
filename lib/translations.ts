@@ -50,6 +50,7 @@ export type Dictionary = {
     partsHint: string;
     partsRequired: string;
     partBrideHouse: string;
+    partGroomHouse: string;
     partChurch: string;
     partRestaurant: string;
     guests: string;
@@ -140,6 +141,7 @@ export const translations: Record<Lang, Dictionary> = {
       partsHint: 'Select all that apply.',
       partsRequired: 'Please select at least one.',
       partBrideHouse: "Bride's House",
+      partGroomHouse: "Groom's House",
       partChurch: 'Church Wedding Ceremony',
       partRestaurant: 'Restaurant Celebration',
       guests: 'Number of Guests',
@@ -231,6 +233,7 @@ export const translations: Record<Lang, Dictionary> = {
       partsHint: 'Նշեք բոլոր հարմար տարբերակները։',
       partsRequired: 'Խնդրում ենք ընտրել առնվազն մեկը։',
       partBrideHouse: 'Հարսի Տուն',
+      partGroomHouse: 'Փեսայի Տուն',
       partChurch: 'Պսակադրություն',
       partRestaurant: 'Հարսանեկան Խնջույք',
       guests: 'Հյուրերի Քանակը',

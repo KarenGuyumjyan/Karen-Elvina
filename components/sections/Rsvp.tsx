@@ -8,7 +8,7 @@ import { useLang, useT } from '@/lib/i18n';
 
 type Attendance = 'yes' | 'no';
 type Side = 'groom' | 'bride';
-type PartKey = 'brideHouse' | 'church' | 'restaurant';
+type PartKey = 'groomHouse' | 'brideHouse' | 'church' | 'restaurant';
 
 const ENDPOINT = process.env.NEXT_PUBLIC_RSVP_ENDPOINT;
 
@@ -29,6 +29,7 @@ export default function Rsvp() {
     { key: 'bride', label: t.names.bride },
   ];
   const partOptions: { key: PartKey; label: string }[] = [
+    { key: 'groomHouse', label: t.rsvp.partGroomHouse },
     { key: 'brideHouse', label: t.rsvp.partBrideHouse },
     { key: 'church', label: t.rsvp.partChurch },
     { key: 'restaurant', label: t.rsvp.partRestaurant },
