@@ -32,9 +32,10 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       setLangState(saved);
       return;
     }
-    // Auto-detect: English browsers get English, everyone else Armenian.
-    const nav = navigator.language?.toLowerCase() ?? "";
-    setLangState(nav.startsWith("en") ? "en" : "hy");
+    // Geo-detect by timezone: visitors in Armenia get Armenian, everyone
+    // else (e.g. USA) gets English.
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone ?? "";
+    setLangState(tz === "Asia/Yerevan" ? "hy" : "en");
   }, []);
 
   useEffect(() => {

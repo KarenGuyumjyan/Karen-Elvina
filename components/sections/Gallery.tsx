@@ -25,7 +25,7 @@ export default function Gallery() {
                 i % 5 === 0
                   ? 'col-span-2 row-span-2 md:col-span-1 md:row-span-2'
                   : ''
-              }`}
+              } ${i >= 3 ? 'md:hidden lg:block' : ''}`}
             >
               <div
                 className={`relative w-full ${

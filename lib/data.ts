@@ -50,13 +50,13 @@ export const wedding = {
 
   gallery: [
     '/images/gallery/Gallery2.JPG',
-    // '/images/gallery/Gallery3.JPG',
     '/images/gallery/Gallery4.JPG',
-    // '/images/gallery/Gallery5.JPG',
     '/images/gallery/Gallery6.JPG',
-    // '/images/gallery/Gallery7.JPG',
-    // '/images/gallery/Gallery8.JPG',
-    // '/images/gallery/Gallery9.JPG',
+    '/images/gallery/Gallery3.JPG',
+    '/images/gallery/Gallery5.JPG',
+    '/images/gallery/Gallery7.JPG',
+    '/images/gallery/Gallery8.JPG',
+    '/images/gallery/Gallery9.JPG',
   ],
 
   events: [

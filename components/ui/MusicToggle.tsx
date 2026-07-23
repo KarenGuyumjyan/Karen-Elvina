@@ -14,7 +14,6 @@ export function MusicToggle() {
     );
     el.loop = true;
     el.volume = 0.6;
-    el.muted = true; // muted autoplay IS permitted; sound turns on at first gesture
     el.addEventListener('error', () => setAvailable(false));
     audioRef.current = el;
 
@@ -27,14 +26,14 @@ export function MusicToggle() {
       if (buttonRef.current && target && buttonRef.current.contains(target)) {
         return;
       }
-      el.muted = false;
+      // Start from the beginning with sound on the very first interaction.
+      el.currentTime = 0;
       if (el.paused) void el.play().catch(() => {});
       setPlaying(true);
       gestures.forEach((e) => window.removeEventListener(e, unlock));
     };
 
-    // Begin immediately (muted). Becomes audible on the first interaction.
-    void el.play().catch(() => {});
+    // No autoplay: playback begins on the first user gesture (see unlock).
     gestures.forEach((e) => window.addEventListener(e, unlock));
 
     return () => {
