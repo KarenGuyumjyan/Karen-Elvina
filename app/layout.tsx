@@ -39,7 +39,7 @@ const jost = Jost({
   display: 'swap',
 });
 
-const coupleTitle = 'Կարեն եվ Էլվինա';
+const coupleTitle = 'Կարեն և Էլվինա';
 const description = `Միացե՛ք մեզ՝ նշելու Կարենի և Էլվինայի հարսանիքը սեպտեմբերի 5-ին։ Join us in celebrating the wedding of ${wedding.groom.name} and ${wedding.bride.name} on ${wedding.dateLabel}.`;
 const ogImage = '/images/gallery/heroImage.JPG';
 
