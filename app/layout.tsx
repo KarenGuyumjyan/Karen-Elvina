@@ -39,7 +39,7 @@ const jost = Jost({
   display: 'swap',
 });
 
-const coupleTitle = 'Կարեն & Էլվինա';
+const coupleTitle = 'Կարեն եվ Էլվինա';
 const description = `Միացե՛ք մեզ՝ նշելու Կարենի և Էլվինայի հարսանիքը սեպտեմբերի 5-ին։ Join us in celebrating the wedding of ${wedding.groom.name} and ${wedding.bride.name} on ${wedding.dateLabel}.`;
 const ogImage = '/images/couple/heroImage.JPG';
 
@@ -75,8 +75,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    siteName: `${coupleTitle} Wedding`,
-    title: `${coupleTitle} — Wedding Invitation`,
+    siteName: 'Karen & Elvina Wedding',
+    title: `${coupleTitle} - Հարսանեկան հրավիրատոմս`,
     description,
     url: siteUrl,
     locale: 'hy_AM',
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${coupleTitle} — Wedding Invitation`,
+    title: `${coupleTitle} - Հարսանեկան հրավիրատոմս`,
     description,
     images: [ogImage],
   },
