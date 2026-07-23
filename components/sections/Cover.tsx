@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import WhipFloral from '@/components/WhipFloral';
 import { useT } from '@/lib/i18n';
 import ShineButton from '../ui/ShineButton';
+import { CoverBackground } from './CoverBackground'
 
 /** Opening cover card — click "Open" to reveal the invitation. */
 export default function Cover() {
@@ -30,9 +31,7 @@ export default function Cover() {
         opened ? 'pointer-events-none scale-105 opacity-0' : 'opacity-100'
       }`}
     >
-      {/* Floating cream card (overflow visible so the sprigs poke past the corners) */}
       <div className='relative w-full max-w-2xl rounded-2xl bg-cream py-5 text-center shadow-2xl md:py-8 overflow-hidden'>
-        {/* Swaying dried-floral decorations */}
         <WhipFloral
           className='-right-[40px] -top-[70px] w-[140px] sm:w-[180px]'
           spriteClassName='rotate-[200deg] opacity-70'
@@ -44,8 +43,8 @@ export default function Cover() {
           tipOrigin='50% 67%'
         />
         <WhipFloral
-          className='-bottom-[70px] -left-[30px] w-[140px] sm:w-[180px]'
-          spriteClassName='-scale-x-100 rotate-[20deg] opacity-70'
+          className='-bottom-[40px] -left-[30px] w-[140px] sm:w-[180px]'
+          spriteClassName='-scale-x-100 rotate-[10deg] opacity-70'
           origin='left bottom'
           amps={[0.45, 1.65, 4.2]}
           duration={6}
@@ -55,7 +54,6 @@ export default function Cover() {
         />
 
         <div className='relative z-10 flex flex-col items-center'>
-          {/* Heart badge */}
           <span className='flex h-16 w-16 items-center justify-center rounded-full bg-espresso text-cream shadow-md animate-heartbeat'>
             <svg
               viewBox='0 0 24 24'
@@ -79,7 +77,7 @@ export default function Cover() {
             <span className='h-px w-16 bg-taupe/70' />
           </div>
 
-          <p className='font-serif text-xl text-cocoa'>{t.dateLabel}</p>
+          <p className='font-serif text-xl text-cocoa font-bold'>{t.dateLabel}</p>
 
           <p className='mt-5 font-serif text-xl text-mocha'>
             {t.cover.invites}
@@ -88,6 +86,7 @@ export default function Cover() {
           <ShineButton onClick={handleOpen} text={t.cover.open} />
         </div>
       </div>
+      <CoverBackground />
     </div>
   );
 }

@@ -147,9 +147,33 @@ body {
   will-change: transform;
 }
 
+/* Ambient falling petals (see CoverBackground). Each petal sets its own
+   --sway (px horizontal drift), duration and delay via inline styles. */
+@keyframes ambient-fall {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(var(--sway, 0px), 105vh, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .whip {
     animation: none;
+  }
+
+  [style*='ambient-fall'] {
+    animation: none !important;
+    opacity: 0;
   }
 }
 
