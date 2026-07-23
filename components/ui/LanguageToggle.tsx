@@ -28,8 +28,8 @@ export function LanguageToggle() {
             aria-pressed={active}
             className={`rounded-full px-3 py-1.5 font-sans text-xs font-medium uppercase tracking-widest transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 ${
               active
-                ? 'bg-taupe text-2f2620'
-                : 'text-parchment/70 hover:text-taupe'
+                ? 'bg-taupe text-ink'
+                : 'text-parchment/70 hover:text-taupe text-taupe'
             }`}
           >
             {opt.label}

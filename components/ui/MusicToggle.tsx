@@ -74,7 +74,7 @@ export function MusicToggle() {
         className={`text-lg ${playing ? 'animate-slow-spin' : ''}`}
         aria-hidden
       >
-        {playing ? '♫' : '⏸'}
+        {playing ? '♫' : '⏸︎'}
       </span>
     </button>
   );
