@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 580" fill="none">
+  <!-- Dried baby's-breath (gypsophila) branch. Stem at the bottom, florets fanning
+       through the upper two-thirds — matched to the "whip" sway masks. -->
+  <defs>
+    <g id="floret">
+      <circle cx="0" cy="-4.2" r="3" fill="#c9b8a3" />
+      <circle cx="4" cy="-1.3" r="3" fill="#bfa88f" />
+      <circle cx="2.5" cy="3.4" r="3" fill="#c9b8a3" />
+      <circle cx="-2.5" cy="3.4" r="3" fill="#bfa88f" />
+      <circle cx="-4" cy="-1.3" r="3" fill="#c9b8a3" />
+      <circle cx="0" cy="0" r="2" fill="#7c6350" />
+    </g>
+  </defs>
+
+  <!-- stems -->
+  <g stroke="#8a6f57" fill="none" stroke-linecap="round">
+    <path d="M150 578 C148 500 140 470 146 430" stroke-width="4" />
+    <path d="M146 430 C150 360 128 320 140 250" stroke-width="3.2" />
+    <path d="M140 250 C146 200 150 150 138 96" stroke-width="2.4" />
+
+    <!-- right branches -->
+    <path d="M146 430 C175 400 200 380 214 356" stroke-width="1.8" />
+    <path d="M140 250 C170 240 196 250 224 244" stroke-width="1.6" />
+    <path d="M143 340 C172 330 190 316 206 300" stroke-width="1.6" />
+    <path d="M140 250 C160 210 180 180 190 150" stroke-width="1.6" />
+    <path d="M138 150 C160 130 180 120 200 128" stroke-width="1.4" />
+
+    <!-- left branches -->
+    <path d="M146 430 C112 402 78 372 58 336" stroke-width="1.8" />
+    <path d="M144 386 C110 372 84 360 60 372" stroke-width="1.5" />
+    <path d="M140 250 C112 232 92 226 74 236" stroke-width="1.6" />
+    <path d="M140 250 C118 208 96 190 84 236" stroke-width="1.4" />
+    <path d="M138 150 C112 128 92 118 74 132" stroke-width="1.4" />
+    <path d="M138 96 C120 70 108 54 96 40" stroke-width="1.3" />
+    <path d="M138 96 C158 74 176 62 196 60" stroke-width="1.3" />
+
+    <!-- tiny nodes -->
+    <path d="M168 300 l10 -6 M120 300 l-10 -6 M170 200 l10 -4 M110 200 l-10 -4" stroke-width="1" />
+  </g>
+
+  <!-- florets scattered along the branch tips (upper two-thirds) -->
+  <g opacity="0.95">
+    <use href="#floret" transform="translate(214,352) scale(1.15)" />
+    <use href="#floret" transform="translate(224,240) scale(1.05)" />
+    <use href="#floret" transform="translate(206,296) scale(1)" />
+    <use href="#floret" transform="translate(190,146) scale(1.1)" />
+    <use href="#floret" transform="translate(200,124) scale(0.95)" />
+    <use href="#floret" transform="translate(196,58) scale(1.05)" />
+
+    <use href="#floret" transform="translate(58,332) scale(1.2)" />
+    <use href="#floret" transform="translate(60,368) scale(1)" />
+    <use href="#floret" transform="translate(74,232) scale(1.1)" />
+    <use href="#floret" transform="translate(84,232) scale(0.9)" />
+    <use href="#floret" transform="translate(74,128) scale(1.05)" />
+    <use href="#floret" transform="translate(96,38) scale(1)" />
+
+    <use href="#floret" transform="translate(138,92) scale(1.25)" />
+    <use href="#floret" transform="translate(140,182) scale(1.1)" />
+    <use href="#floret" transform="translate(146,300) scale(1.05)" />
+    <use href="#floret" transform="translate(150,360) scale(0.95)" />
+    <use href="#floret" transform="translate(122,150) scale(0.9)" />
+    <use href="#floret" transform="translate(160,220) scale(0.85)" />
+    <use href="#floret" transform="translate(112,260) scale(0.85)" />
+    <use href="#floret" transform="translate(178,340) scale(0.8)" />
+  </g>
+</svg>

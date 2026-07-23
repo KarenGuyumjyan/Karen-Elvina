@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+:root[lang="hy"] {
+  --font-cormorant: var(--font-romanuni);
+  --font-great-vibes: var(--font-SHK_Dzeragir);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url('/images/decorations/paper.webp');
+  background-size: 100% auto;
+  
+  @apply bg-cream text-ink font-serif antialiased;
+
+  @keyframes shine {
+    0% {
+      left: -40%;
+    }
+    100% {
+      left: 140%;
+    }
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-150%);
+  }
+  25%,
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.animate-shine {
+  animation: shine 5s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+.animate-heartbeat {
+  animation: heartbeat 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Slow, gentle up-and-down drift that preserves the element's -6deg tilt. */
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(-6deg);
+  }
+}
+
+/* Slow, gentle up-and-down drift that preserves the element's -6deg tilt. */
+@keyframes float-versa {
+  0%,
+  100% {
+    transform: translateY(0) rotate(150deg);
+  }
+  50% {
+    transform: translateY(-18px) rotate(150deg);
+  }
+}
+
+.animate-float-versa {
+  animation: float-versa 9s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 9s ease-in-out infinite;
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto w-full max-w-5xl px-6 md:px-10;
+  }
+
+  .eyebrow {
+    @apply font-sans text-xs uppercase tracking-widest text-mocha;
+  }
+
+  .section-title {
+    @apply font-script text-4xl text-cocoa md:text-6xl;
+  }
+
+  .divider {
+    @apply mx-auto my-6 flex items-center justify-center gap-3 text-taupe;
+  }
+
+  .divider::before,
+  .divider::after {
+    content: '';
+    @apply h-px w-14 bg-taupe/60 md:w-20;
+  }
+}
+
+/* "Whip" sway — a segmented stem-in-the-breeze motion.
+   Each segment sets its own --whip-amp (degrees), --whip-dur and --whip-delay. */
+@keyframes whip-sway {
+  0% {
+    transform: rotate(calc(var(--whip-amp, 10) * -1deg));
+  }
+  50% {
+    transform: rotate(calc(var(--whip-amp, 10) * 1deg));
+  }
+  100% {
+    transform: rotate(calc(var(--whip-amp, 10) * -1deg));
+  }
+}
+
+.whip {
+  animation: whip-sway var(--whip-dur, 4s) ease-in-out infinite;
+  animation-delay: var(--whip-delay, 0s);
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whip {
+    animation: none;
+  }
+}
+
+/* Scroll-reveal helper (progressively enhanced by IntersectionObserver) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.9s ease-out,
+    transform 0.9s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
