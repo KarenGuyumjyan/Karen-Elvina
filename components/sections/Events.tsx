@@ -2,7 +2,7 @@
 
 import Reveal from '@/components/Reveal';
 import Flourish from '@/components/Flourish';
-import { wedding } from '@/lib/data';
+import { houseEventNames, wedding } from '@/lib/data';
 import { useT } from '@/lib/i18n';
 import WhipFloral from '../WhipFloral';
 
@@ -56,12 +56,19 @@ function EventCard({
 }
 
 /** Section 7 — Event details / Location */
-export default function Events() {
+export default function Events({ hideHouses = false }: { hideHouses?: boolean }) {
   const t = useT();
   // Zip non-text event data (time, map, icon) with localized text by index.
+  // `isHouse` is captured from the original name before the localized spread
+  // overwrites it, so the house filter stays correct.
   const cards = wedding.events
-    .map((event, i) => ({ ...event, ...t.events.items[i] }))
-    .filter((event) => event.venue);
+    .map((event, i) => ({
+      ...event,
+      ...t.events.items[i],
+      isHouse: houseEventNames.includes(event.name),
+    }))
+    .filter((event) => event.venue)
+    .filter((event) => !hideHouses || !event.isHouse);
 
   return (
     <section id='events' className='bg-sand/520 py-16 md:py-24'>

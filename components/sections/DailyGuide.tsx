@@ -3,15 +3,22 @@
 import Reveal from '@/components/Reveal';
 import Calendar from '@/components/ui/Calendar';
 import Image from 'next/image';
-import { wedding } from '@/lib/data';
+import { houseEventNames, wedding } from '@/lib/data';
 import { useT } from '@/lib/i18n';
 
-export const DailyGuide = () => {
+export const DailyGuide = ({ hideHouses = false }: { hideHouses?: boolean }) => {
   const t = useT();
   // Non-text event data (time, icon) zipped with localized names by index.
+  // `isHouse` is computed from the original (unlocalized) name during the zip,
+  // so the house filter works even though `name` is overwritten below.
   const items = wedding.events
-    .map((event, i) => ({ ...event, name: t.events.items[i].name }))
-    .filter((event) => event.icon);
+    .map((event, i) => ({
+      ...event,
+      name: t.events.items[i].name,
+      isHouse: houseEventNames.includes(event.name),
+    }))
+    .filter((event) => event.icon)
+    .filter((event) => !hideHouses || !event.isHouse);
 
   return (
     <section id='daily-guide' className='bg-sand/40 py-16 md:py-24 w-full'>

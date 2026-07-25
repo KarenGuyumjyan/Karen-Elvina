@@ -12,7 +12,7 @@ type PartKey = 'groomHouse' | 'brideHouse' | 'church' | 'restaurant';
 
 const ENDPOINT = process.env.NEXT_PUBLIC_RSVP_ENDPOINT;
 
-export default function Rsvp() {
+export default function Rsvp({ hideHouses = false }: { hideHouses?: boolean }) {
   const t = useT();
   const { lang } = useLang();
   const [submitted, setSubmitted] = useState(false);
@@ -28,12 +28,16 @@ export default function Rsvp() {
     { key: 'groom', label: t.names.groom },
     { key: 'bride', label: t.names.bride },
   ];
-  const partOptions: { key: PartKey; label: string }[] = [
+  const allPartOptions: { key: PartKey; label: string }[] = [
     { key: 'groomHouse', label: t.rsvp.partGroomHouse },
     { key: 'brideHouse', label: t.rsvp.partBrideHouse },
     { key: 'church', label: t.rsvp.partChurch },
     { key: 'restaurant', label: t.rsvp.partRestaurant },
   ];
+  const partOptions = allPartOptions.filter(
+    (opt) =>
+      !hideHouses || (opt.key !== 'groomHouse' && opt.key !== 'brideHouse'),
+  );
 
   function togglePart(part: PartKey) {
     setPartsError(false);

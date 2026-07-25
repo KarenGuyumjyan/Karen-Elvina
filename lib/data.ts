@@ -63,7 +63,7 @@ export const wedding = {
   events: [
     {
       name: 'Groom House',
-      time: '10:30',
+      time: '10:15',
       venue: "Groom's House",
       address: 'Ara Sargsyan Street, 17A, Yerevan',
       mapUrl: 'https://yandex.com/maps/-/CTbSUWpa',
@@ -102,3 +102,8 @@ export const wedding = {
 };
 
 export type WeddingEvent = (typeof wedding.events)[number];
+
+// Event `name` keys for the pre-ceremony house visits. Pages aimed at guests
+// who skip the house gatherings (e.g. /wedding) omit these entries — see the
+// `hideHouses` prop on DailyGuide, Events and Rsvp.
+export const houseEventNames = ['Groom House', 'Bride House'];
