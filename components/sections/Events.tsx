@@ -78,8 +78,12 @@ export default function Events({ hideHouses = false }: { hideHouses?: boolean })
           <h2 className='section-title mt-3'>{t.events.title}</h2>
         </Reveal>
         <WhipFloral
-          className=' -left-[30px] top-20 w-[140px] sm:w-[180px] z-10 md:left-48'
-          spriteClassName='absolute -scale-x-100 rotate-[20deg] opacity-70'
+          className={` ${
+            hideHouses ? 'top-2 -left-[40px] md:left-36' : 'top-20 -left-[30px] md:left-48'
+          } w-[140px] sm:w-[180px] z-10`}
+          spriteClassName={`absolute -scale-x-100  ${
+            hideHouses ? 'rotate-[0deg]' : 'rotate-[20deg]'
+          } opacity-70`}
           origin='left bottom'
           amps={[0.45, 1.65, 4.2]}
           duration={6}
@@ -88,7 +92,9 @@ export default function Events({ hideHouses = false }: { hideHouses?: boolean })
           tipOrigin='50% 33%'
         />
         <WhipFloral
-          className=' -right-[30px] bottom-[832px] w-[140px] sm:w-[180px] z-10 md:right-32'
+          className={`-right-[30px] ${
+            hideHouses ? 'bottom-[480px]' : 'bottom-[832px]'
+          } w-[140px] sm:w-[180px] z-10 md:right-32`}
           spriteClassName='absolute -rotate-[20deg] opacity-70'
           origin='left bottom'
           amps={[0.45, 1.65, 4.2]}
